@@ -1,0 +1,4 @@
+#!/bin/bash
+
+g++ -std=c++11 src/sudokusolver/sudokusolver/*.cpp -o bin/sudokusolver
+
