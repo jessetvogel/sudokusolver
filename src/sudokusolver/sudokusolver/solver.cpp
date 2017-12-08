@@ -12,11 +12,11 @@ bool Solver::solve() {
         // Otherwise, use backtracking
         if(!sudoku.filled() && sudoku.valid()) {
             for(int position = 0;position < 81; ++position) {
-                for(int digit = 1;digit <= 9; ++digit) {
-                    // If this position is already certain, just  continue
-                    int possible = sudoku.getPossible(position);
-                    if(POSSIBLE_CERTAIN(possible)) continue;
-                    
+                // If this position is already certain, just  continue
+                int possible = sudoku.getPossible(position);
+                if(POSSIBLE_CERTAIN(possible)) continue;
+                
+                for(int digit = 1;digit <= 9; ++digit) {    
                     if(possible & POSSIBLE_FROM_DIGIT(digit)) {
                         // Make a copy of the sudoku, make an assumption
                         Sudoku copy = sudoku;

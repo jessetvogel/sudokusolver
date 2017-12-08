@@ -7,7 +7,7 @@
 int main() {
     // Try to load sudoku
     Sudoku sudoku;
-    if(!sudoku.load("../examples/sudoku_1.txt")) {
+    if(!sudoku.load("../examples/sudoku_3.txt")) {
         std::cout << "Failed to load sudoku" << std::endl;
         return 0;
     }
